@@ -22,7 +22,7 @@ public class LoginController {
     @RequestMapping(value={"/", "/login"}, method = RequestMethod.GET)
     public ModelAndView login() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("login2");
+        modelAndView.setViewName("login");
         return modelAndView;
     }
 
@@ -32,7 +32,7 @@ public class LoginController {
         modelAndView.setViewName("chart");
         return modelAndView;
 
-    }    @RequestMapping(value={"/home"}, method = RequestMethod.GET)
+    }    @RequestMapping(value={"/aboutUs"}, method = RequestMethod.GET)
     public ModelAndView home() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("aboutUs");

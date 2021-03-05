@@ -25,34 +25,52 @@
         <div class="ui grid container centered">
             <div class="seven wide column">
                 <div class="box">
+                    <form autocomplete="off" action="#" th:action="@{/registration}"
+                          th:object="${user}" method="post" class="form-horizontal"
+                          role="form">
                     <h1>Register</h1>
                     <span class="line"></span>
                     <form class="ui form" action="">
                         <div class="field">
                             <label>Name</label>
                             <div class="ui icon input fluid">
-                                <input type="text" name="name" placeholder="Name">
+                                    <input type="text" th:field="*{name}" placeholder="Name" required
+                                           class="form-control"/>
                                 <i class="user icon"></i>
                             </div>
                         </div>
                         <div class="field">
                             <label>Last name</label>
                             <div class="ui icon input fluid">
-                                <input type="text" name="last-name" placeholder="Last name">
+                                    <input type="text" th:field="*{lastName}" required
+                                           placeholder="Last Name" class="form-control"/>
                                 <i class="user icon"></i>
                             </div>
                         </div>
+
+                        <form class="ui form" action="">
+                            <div class="field">
+                                <label>Username</label>
+                                <div class="ui icon input fluid">
+                                    <input type="text" minlength="5" th:field="*{userName}" placeholder="User Name"
+                                           class="form-control" required/>
+                                    <i class="icon-terminal on icon-sign-blank"></i>
+                                </div>
+                            </div>
+
                         <div class="field">
                             <label>Email</label>
                             <div class="ui icon input fluid">
-                                <input type="email" name="email" placeholder="example@email.com">
+                                    <input type="text" th:field="*{email}" required placeholder="example@email.com"
+                                           class="form-control"/>
                                 <i class="envelope icon"></i>
                             </div>
                         </div>
                         <div class="field">
                             <label>Password</label>
                             <div class="ui icon input fluid">
-                                <input type="password" name="password" placeholder="Your password">
+                                    <input type="password" th:field="*{password}" required
+                                           placeholder="Your password" class="form-control"/>
                                 <i class="shield icon"></i>
                             </div>
                         </div>
@@ -62,7 +80,7 @@
                         </div>
                     </form>
                 </div>
-                <a class="link-button" href="login2.html">Have an account? Login now!</a>
+                <a class="link-button" href="login.html">Have an account? Login now!</a>
             </div>
         </div>
 

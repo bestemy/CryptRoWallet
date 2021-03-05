@@ -1,37 +1,59 @@
-<!--<!DOCTYPE html>-->
-<!--<html xmlns="http://www.w3.org/1999/xhtml"-->
-<!--      xmlns:th="http://www.thymeleaf.org">-->
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>CryptRoWallet</title>
+    </head>
+    <body>
+    <form th:action="@{/login}" method="POST" class="form-signin">
+        <header>
+            <div class="ui grid container centered">
+                <div class="five wide column middle aligned">
+                    <a href="#">
+                        <img src="images/logo-web.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="ui grid container centered">
+            <div class="seven wide column">
+                <div class="box">
+                    <h1>Login</h1>
+                    <span class="line"></span>
+                    <form class="ui form" action="">
+                        <div class="field">
+                            <label>Username</label>
+                            <div class="ui icon input fluid">
+                                <input type="text" id="user_name" name="user_name" placeholder="User Name"
+                                       class="form-control" required/>
+                                <i class="envelope icon"></i>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Password</label>
+                            <div class="ui icon input fluid">
+                                <input type="password" name="password" placeholder="Your password">
+                                <i class="shield icon"></i>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <div></div>
+                            <button class="primary-button">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <a class="link-button" href="registration.html">Don't have an account? Register now!</a>
+            </div>
+        </div>
 
-<!--<head>-->
-<!--    <title>Spring Security Tutorial</title>-->
-<!--    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>-->
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
-<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-<!--</head>-->
-
-<!--<body>-->
-<!--<form th:action="@{/registration}" method="get">-->
-<!--    <button class="btn btn-md btn-warning btn-block" type="Submit">Go To Registration Page</button>-->
-<!--</form>-->
-
-<!--<div class="container">-->
-<!--    <img th:src="@{/images/login.jpg}" class="img-responsive center-block" width="300" height="300" alt="Logo"/>-->
-<!--    <form th:action="@{/login}" method="POST" class="form-signin">-->
-<!--        <h3 class="form-signin-heading" th:text="Welcome"></h3>-->
-<!--        <br/>-->
-
-<!--        <input type="text" id="user_name" name="user_name" placeholder="User Name"-->
-<!--               class="form-control" required/> <br/>-->
-<!--        <input type="password" th:placeholder="Password"-->
-<!--               id="password" name="password" class="form-control" required/> <br/>-->
-
-<!--        <div align="center" th:if="${param.error}">-->
-<!--            <p style="font-size: 20; color: #FF1C19;">User Name or Password invalid, please verify</p>-->
-<!--        </div>-->
-<!--        <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit"-->
-<!--                th:text="Login"></button>-->
-<!--    </form>-->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    </body>
+</html>
