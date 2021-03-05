@@ -1,0 +1,136 @@
+//Mixes
+@mixin transition($ease) {
+    -webkit-transition: $ease ease !important;
+    -moz-transition: $ease ease !important;
+    -o-transition: $ease ease !important;
+    transition: $ease ease !important;
+}
+
+// Fonts
+$roboto: 'Roboto', sans-serif;
+
+$regular: 400;
+$bold: 700;
+$extra-bold: 900;
+
+// Colors
+$primary:            #467de7;
+$secondary:          #57b957;
+$darkgray:           #001c3d;
+$lightgray:          #a9b9cc;
+$bg:                 #3831a6;
+$white:              #ffffff;
+$black:              #000000;
+
+body {
+    background: $bg;
+    font-family: $roboto;
+}
+
+header {
+    padding: 50px 0;
+}
+
+.box {
+    background: $white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.primary-button {
+    @include transition(0.3s);
+    background: $secondary;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: $white;
+    font-weight: $bold;
+
+    &:hover {
+        color: $white;
+        background: rgba($secondary, 0.7);
+    }
+}
+
+.link-button {
+    @include transition(0.3s);
+    color: $white;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    text-decoration: underline;
+    font-size: 16px;
+
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.copyright {
+    color: $white;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    font-size: 16px;
+}
+
+.ui.form {
+
+    .field {
+        margin-bottom: 20px;
+
+        label {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: $roboto;
+    font-size: 24px;
+    font-weight: $extra-bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    display: flex;
+    background: $secondary;
+    margin-bottom: 30px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 30px 10px;
+
+    p {
+        color: rgba($darkgray, 0.7);
+        line-height: 22px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+
+        a {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

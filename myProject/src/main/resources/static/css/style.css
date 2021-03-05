@@ -1,0 +1,131 @@
+body {
+  background: #3831a6;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 50px 0;
+}
+
+.box {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.primary-button {
+  -webkit-transition: 0.3s ease !important;
+  transition: 0.3s ease !important;
+  background: #57b957;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.primary-button:hover {
+  color: #ffffff;
+  background: rgba(87, 185, 87, 0.7);
+}
+
+.link-button {
+  -webkit-transition: 0.3s ease !important;
+  transition: 0.3s ease !important;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.link-button:hover {
+  color: #57b957;
+}
+
+.copyright {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px 0;
+  font-size: 16px;
+}
+
+.ui.form .field {
+  margin-bottom: 20px;
+}
+
+.ui.form .field label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #57b957;
+  margin-bottom: 30px;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 30px 10px;
+}
+
+.content p {
+  color: rgba(0, 28, 61, 0.7);
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .buttons a {
+  margin-right: 10px;
+}
+
+.content .buttons a:last-child {
+  margin-right: 0;
+}
+/*# sourceMappingURL=style.css.map */

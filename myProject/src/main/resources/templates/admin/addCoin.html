@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Register Coin Form</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/addCoin.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form autocomplete="off" action="#" th:action="@{/admin/addCoin}"
+                  th:object="${coin}" method="post" class="form-horizontal"
+                  role="form">
+                <h2>Coin Registration Form</h2>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('coinName')}" th:errors="*{coinName}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{coinName}" placeholder="Coin Name"
+                               class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('usdPrice')}" th:errors="*{usdPrice}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{usdPrice}" placeholder="USD Price"
+                               class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('eurPrice')}" th:errors="*{eurPrice}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{eurPrice}" placeholder="EUR Price"
+                               class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('ronPrice')}" th:errors="*{ronPrice}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{ronPrice}" placeholder="RON Price"
+                               class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('oneDayFluctuation')}" th:errors="*{oneDayFluctuation}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{oneDayFluctuation}" placeholder="24h Fluctuation"
+                               class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('oneWeekFluctuation')}" th:errors="*{oneWeekFluctuation}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{oneWeekFluctuation}" placeholder="7D Fluctuation"
+                               class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('marketCap')}" th:errors="*{marketCap}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{marketCap}" placeholder="Market Cap"
+                               class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <label th:if="${#fields.hasErrors('volume')}" th:errors="*{volume}"
+                               class="validation-message"></label>
+                        <input type="text" th:field="*{volume}" placeholder="Volume"
+                               class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <button type="submit" class="btn btn-primary btn-block">Register Coin</button>
+                    </div>
+                </div>
+
+                <h2><span class="text-success" th:utext="${successMessage}"></span></h2>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
